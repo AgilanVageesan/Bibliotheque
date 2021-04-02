@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        console.log("Hello");
+        setImmediate(function imd() {
+            console.log("imd fn")
+        });
+        
+        setInterval(function time() {
+            console.log("Time out");
+        }, 0);
+
+        console.log("Good Day !!!");
+
+        document.addEventListener("click", function clicked() {
+            console.log("You Clicked!!!");
+        });
+
+
+        console.log("Bye!!!");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div appHover class="card col-md-4 col-lg-3" *ngFor="let customer of customers"> 
+            <div class="card-header">
+                {{customer.firstName | textconverter :'upper'}} {{customer.lastName | textconverter :'lower'}}
+                <a class="float-right fa fa-trash" (click) ="deleteCard(customer.id)"></a>
+              </div>
+            <div class="card-body">
+                <img src="assets/images/{{customer.gender}}.png" class="image"/>
+                {{customer.address}}
+                <a class="float-right fa fa-edit" [routerLink]="['/customers/edit',customer.id]"></a> 
+            </div>
+         </div>
+    </div>
+</div>

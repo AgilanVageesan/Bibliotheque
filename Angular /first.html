@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="lib.js"></script>
+    <script>
+        var data = [73,12,67,90,32,11,15];
+
+        var evens = filter(data, function(no) { return no %2 ===0;});
+        forEach(evens, console.log);
+
+        var products = [
+            { "id": 1, "name": "iPhone", "price": 124447.44, "category": "mobile" },
+            { "id": 2, "name": "Onida", "price": 4444.44, "category": "tv" },
+            { "id": 3, "name": "OnePlus 6", "price": 98444.44, "category": "mobile" },
+            { "id": 4, "name": "HDMI connector", "price": 2444.00, "category": "computer" },
+            { "id": 5, "name": "Samsung", "price": 68000.00, "category": "tv" }];
+
+    // predicate
+    var isMobile = function(p) {
+        if(p.category === 'mobile') {
+            return true;
+        }
+        return false;
+    }
+
+    var mobiles = filter(products, isMobile);
+
+    forEach(mobiles, console.log);
+
+
+    var names = map(products, function(elem) { return elem.name});
+
+    console.log(names);
+    </script>
+</body>
+</html>
